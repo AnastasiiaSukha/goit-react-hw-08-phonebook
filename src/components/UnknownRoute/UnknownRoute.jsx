@@ -4,7 +4,7 @@ export default function UnknownRoute() {
   return (
     <Container>
       <p>404 unknown path </p>
-      <p>Try to reload the page</p>
+      <p>Ooop, something went wrong!</p>
     </Container>
   );
 }

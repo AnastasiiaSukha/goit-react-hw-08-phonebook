@@ -5,8 +5,8 @@ import AuthNavigation from 'components/AuthNavigation';
 import UserMenu from 'components/UserMenu';
 import { authSelectors } from 'redux/auth';
 import routesPath from 'routesPath';
-import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import Spinner from 'components/Spinner';
+import {RiContactsBook2Fill} from 'react-icons/ri'
 
 export default function Header() {
   const isLoggedIn = useSelector(authSelectors.getIsloggedIn);
@@ -23,8 +23,7 @@ export default function Header() {
         <Container>
           <StyledLink to={routesPath.home}>
             <Title>
-              <AutoStoriesIcon fontSize="large" />
-              Contactsbook
+              <RiContactsBook2Fill size="30px" />PhoneBook
             </Title>
           </StyledLink>
           {isHomePath && isLoggedIn && (

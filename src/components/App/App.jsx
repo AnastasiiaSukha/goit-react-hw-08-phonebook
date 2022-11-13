@@ -7,7 +7,7 @@ import Header from 'components/Header';
 import PrivateRoute from 'components/PrivateRoute';
 import PublicRoute from 'components/PublicRoute';
 import Spinner from 'components/Spinner';
-import { Box } from 'components/Box';
+import { Container } from 'components/Container';
 
 const HomePage = lazy(() => import('pages/HomePage'));
 const LoginPage = lazy(() => import('pages/LoginPage'));
@@ -26,9 +26,9 @@ const App = () => {
     <>
       <Suspense
         fallback={
-          <Box display="flex" justifyContent="center" mt="150px">
+          <Container display="flex" justifyContent="center" mt="150px">
             {Spinner.customSpinner}
-          </Box>
+          </Container>
         }
       >
         <Routes>

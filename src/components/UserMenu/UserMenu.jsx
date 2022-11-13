@@ -1,9 +1,9 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { authSelectors, authOperations } from 'redux/auth';
-import avatar from '../../images/user-avatar.jpeg';
 
 import LogoutIcon from '@mui/icons-material/Logout';
-import { ImgWrap, Container, Button } from './UserMenu.styled';
+import { Wrap, Container, Button} from './UserMenu.styled';
+import { FaUserCircle } from 'react-icons/fa';
 
 export default function UserMenu() {
   const name = useSelector(authSelectors.getUserName);
@@ -11,10 +11,10 @@ export default function UserMenu() {
   const dispatch = useDispatch();
   return (
     <Container>
-      <ImgWrap>
-        <img src={avatar} alt="avatar" />
-      </ImgWrap>
-      <span>Welcome, {name}</span>
+      <Wrap>
+      <FaUserCircle size="2rem" color="#C0C9CC"/>
+      <span> Welcome, {name} </span>
+      </Wrap>
       <Button
         type="button"
         onClick={() => {

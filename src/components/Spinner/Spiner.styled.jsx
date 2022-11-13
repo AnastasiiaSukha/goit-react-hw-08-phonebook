@@ -22,10 +22,10 @@ export const Loader = styled('div')`
     left: 0;
     width: 15px;
     height: 15px;
-    background: #00ff0a;
+    background: black;
     border-radius: 50%;
-    box-shadow: 0 0 10px #00ff0a, 0 0 20px #00ff0a, 0 0 40px #00ff0a,
-      0 0 60px #00ff0a, 0 0 80px #00ff0a, 0 0 100px #00ff0a;
+    box-shadow: 0 0 10px #ffff, 0 0 20px #ffff, 0 0 40px #ffff,
+      0 0 60px #ffff, 0 0 80px #ffff, 0 0 100px #ffff;
 
     animation: animateSpan 2s linear infinite;
     animation-delay: calc(0.1s * var(--i));

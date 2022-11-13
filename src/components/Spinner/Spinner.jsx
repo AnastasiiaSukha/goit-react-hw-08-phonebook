@@ -1,17 +1,17 @@
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import { ThreeCircles, ThreeDots } from 'react-loader-spinner';
-import { Box } from 'components/Box/Box';
+import { Container} from 'components/Container/Container';
 import { Loader } from './Spiner.styled';
 
 const threeCircles = (
-  <Box display="flex" justifyContent="center" mt={6}>
+  <Container display="flex" justifyContent="center" mt={6}>
     <ThreeCircles
       color="red"
       outerCircleColor="blue"
       middleCircleColor="green"
       innerCircleColor="grey"
     />
-  </Box>
+  </Container>
 );
 
 const threeDots = (

@@ -1,18 +1,17 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Formik, ErrorMessage } from 'formik';
 import * as yup from 'yup';
-import Avatar from '@mui/material/Avatar';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { authOperations, authSelectors } from 'redux/auth';
 import {
   LoginBtn,
   LoginForm,
   Input,
   ErrorMsg,
-  AvatarText,
+  Text,
+  FormContainer
 } from './LoginPage.styled';
 import Spiner from 'components/Spinner';
-import { Box } from 'components/Box/Box';
+import { Container } from 'components/Container/Container';
 
 let loginSchema = yup.object().shape({
   email: yup.string().email(),
@@ -36,22 +35,20 @@ export default function LoginPage() {
   return (
     <>
       {isFetchingCurrentUser ? (
-        <Box display="flex" justifyContent="center" mt="120px">
+        <Container display="flex" justifyContent="center" mt="120px">
           {Spiner.customSpinner}
-        </Box>
+        </Container>
       ) : (
         <Formik
           initialValues={{ email: '', password: '' }}
           onSubmit={handleSubmit}
           validationSchema={loginSchema}
-        >
+          >
+            <FormContainer>
           <LoginForm>
             <div>
-              <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-                <LockOutlinedIcon />
-              </Avatar>
-              <AvatarText>LogIn</AvatarText>
-            </div>
+              <Text>LogIn</Text>
+                </div>
             <Input
               type="email"
               name="email"
@@ -68,8 +65,9 @@ export default function LoginPage() {
             <ErrorMessage name="password">
               {msg => <ErrorMsg>{msg}</ErrorMsg>}
             </ErrorMessage>
-            <LoginBtn>LogIn</LoginBtn>
-          </LoginForm>
+            <LoginBtn type="submit">LOGIN</LoginBtn>
+            </LoginForm>
+            </FormContainer>
         </Formik>
       )}
     </>

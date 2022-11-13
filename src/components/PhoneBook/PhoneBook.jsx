@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { Container, Title } from './PhoneBook.styled';
+import { ContactsContainer, Title, Text } from './PhoneBook.styled';
 import ContactForm from 'components/ContactForm';
 import ContactList from 'components/ContactLIst';
 import Filter from 'components/Filter';
-import { Box } from 'components/Box/Box';
+import { Container  } from 'components/Container/Container';
 import Spinner from 'components/Spinner';
 import { useContacts } from 'hooks';
 import { contactsOperations } from 'redux/contacts';
@@ -35,24 +35,24 @@ const PhoneBook = () => {
   const filteredContacts = filterContacts();
 
   return (
-    <Box display="flex" justifyContent="center">
-      <Container>
+    <Container display="flex" justifyContent="center">
+      <ContactsContainer>
         <Title>Phonebook</Title>
         <ContactForm />
 
         <Title>Contacts</Title>
-        <Box display="flex" justifyContent="space-between">
+        <Container display="flex" justifyContent="space-between">
           <Filter value={filter} onChange={handleFilterInput} />
-          <h3>Total contacts: {filteredContacts.length}</h3>
-        </Box>
+          <Text>Total contacts: {filteredContacts.length}</Text>
+        </Container>
 
         {loader ? (
           Spinner.threeCircles
         ) : (
           <ContactList contacts={filteredContacts} />
         )}
-      </Container>
-    </Box>
+      </ContactsContainer>
+    </Container >
   );
 };
 

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Item, Button } from './ContactListItem.styled';
 import { useContacts } from 'hooks';
-import { Box } from 'components/Box/Box';
+import { Container } from 'components/Container/Container';
 import Swal from 'sweetalert2';
 
 const ContactListItem = ({ id, name, number }) => {
@@ -68,7 +68,7 @@ const ContactListItem = ({ id, name, number }) => {
           <span>{number}</span>
         </>
       )}
-      <Box>
+      <Container >
         <Button onClick={updateContactData}>
           {isEdited ? 'Save' : 'Edit'}
         </Button>
@@ -81,7 +81,7 @@ const ContactListItem = ({ id, name, number }) => {
         >
           {loader && currentId ? 'Deleting...' : 'Delete'}
         </Button>
-      </Box>
+      </Container >
     </Item>
   );
 };

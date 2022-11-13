@@ -6,76 +6,45 @@ export const StyledLink = styled(NavLink)`
   justify-content: center;
   align-items: center;
   margin-right: 7px;
-  width: 120px;
-  height: 35px;
+  width: 130px;
+  height: 45px;
   border: none;
+  font-size: ${({ theme }) => theme.fontSizes.l}px;
   outline: none;
   text-decoration: none;
   color: ${({ theme }) => theme.colors.white};
-  background: #111;
   cursor: pointer;
   position: relative;
   z-index: 0;
-  border-radius: 10px;
-  :before {
-    content: '';
-    background: linear-gradient(
-      45deg,
-      #ff0000,
-      #ff7300,
-      #fffb00,
-      #48ff00,
-      #00ffd5,
-      #002bff,
-      #7a00ff,
-      #ff00c8,
-      #ff0000
-    );
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    border-radius: 10px;
-  }
-
+ color: white;
+  position: relative;
+  transition: all .3s cubic-bezier(.2, 0, 0, 1);
+  z-index: 1;
+  
   &:after {
-    background: transparent;
-  }
-
-  &:hover:before {
-    opacity: 1;
-  }
-  &.active:after {
-    z-index: -1;
     content: '';
+    display: block;
+    height: 2px;
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #5b03b8, #b003aa, #4616e6);
-    left: 0;
-    top: 0;
-    border-radius: 10px;
+    bottom: 0;
+    right: 1.25rem;
+    left: 1.25rem;
+    background-color: #ffffff;
+    transition: all .3s cubic-bezier(.2, 0, 0, 1);
+    transform-origin: bottom center;
+    z-index: -1;
   }
-
-  @keyframes glowing {
-    0% {
-      background-position: 0 0;
-    }
-    50% {
-      background-position: 400% 0;
-    }
-    100% {
-      background-position: 0 0;
+  
+  &:hover {
+    color: #2D2D2D;
+    
+    &:after {
+      right: 0;
+      left: 0;
+      height: 100%;
     }
   }
-`;
+}`
 
 export const LinkWraper = styled('div')`
   display: flex;

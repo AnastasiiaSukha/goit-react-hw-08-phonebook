@@ -2,14 +2,13 @@ import { useDispatch } from 'react-redux';
 import { authOperations } from 'redux/auth';
 import { Formik, ErrorMessage } from 'formik';
 import * as yup from 'yup';
-import Avatar from '@mui/material/Avatar';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import {
   RegForm,
   RegInput,
   RegBtn,
   ErrorMsg,
-  AvatarText,
+  Text,
+  FormContainer
 } from './RegisterPage.styled';
 
 let loginSchema = yup.object().shape({
@@ -36,12 +35,10 @@ export default function RegisterPage() {
       onSubmit={handleSubmit}
       validationSchema={loginSchema}
     >
+      <FormContainer>
       <RegForm>
         <div>
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-            <LockOutlinedIcon />
-          </Avatar>
-          <AvatarText>SignUp</AvatarText>
+          <Text>SignUp</Text>
         </div>
         <RegInput
           type="text"
@@ -69,6 +66,7 @@ export default function RegisterPage() {
         </ErrorMessage>
         <RegBtn>SignUp</RegBtn>
       </RegForm>
+      </FormContainer>
     </Formik>
   );
 }

@@ -75,7 +75,7 @@ const ContactForm = () => {
         title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
         required
         onChange={inputChangeHandler}
-        placeholder="tellephone number xxx-xx-xx"
+        placeholder="telephone number"
       />
 
       <Button disabled={addLoader}>

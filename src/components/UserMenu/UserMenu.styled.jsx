@@ -1,13 +1,10 @@
 import styled from 'styled-components';
 
-export const ImgWrap = styled('div')`
-  width: 40px;
-  height: 40px;
+export const Wrap = styled('div')`
   margin-right: 7px;
-  background-color: ${({ theme }) => theme.colors.title};
-  border-radius: 50%;
-  overflow: hidden;
+  display:flex;
 `;
+
 
 export const Container = styled('div')`
   display: flex;
@@ -15,9 +12,11 @@ export const Container = styled('div')`
   height: 100%;
 
   & span {
-    font-size: ${({ theme }) => theme.fontSizes.s}px;
-    color: ${({ theme }) => theme.colors.title};
-    margin-right: 7px;
+    font-size: ${({ theme }) => theme.fontSizes.l}px;
+    margin-right: 12px;
+    margin-left:7px;
+    margin-top: 6px;
+    color: #F2F1F0;
     @media ${({ theme }) => theme.media.tablet} {
       font-size: ${({ theme }) => theme.fontSizes.m}px;
     }

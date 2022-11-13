@@ -12,7 +12,7 @@ export const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: normal;
-    background-color: #5b915b;
+   background-image: linear-gradient(to right top, #181b20, #1e2427, #272d2d, #313633, #3d3e3b);
   }
 
   h1,

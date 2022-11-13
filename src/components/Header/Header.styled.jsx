@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const StyledHeader = styled('div')`
-  background-color: ${({ theme }) => theme.colors.background};
+background-image: linear-gradient(to top, #23262a, #2e3335, #3a3f3f, #494c4a, #585957);
   border-bottom-left-radius: ${({ theme }) => theme.radii.medium};
   border-bottom-right-radius: ${({ theme }) => theme.radii.medium};
   box-shadow: ${({ theme }) => theme.shadows.regular};
@@ -25,6 +25,8 @@ export const Container = styled('div')`
 
 export const StyledLink = styled(Link)`
   text-decoration: none;
+  color: #F7F8F8;
+  margin-top:20px;
 `;
 
 export const Title = styled('h2')`

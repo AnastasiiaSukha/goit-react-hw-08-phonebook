@@ -1,13 +1,22 @@
-import { Container, HomeTitle, HomeText } from './HomePage.styled';
-import Confetti from 'components/Confetti';
+import { Container, HomeText, AnimatedGradientText} from './HomePage.styled';
+import { Link } from './HomePage.styled';
 
 export default function HomePage() {
   return (
     <>
-      {Confetti()}
       <Container>
-        <HomeTitle>Welcome to ContactsBook</HomeTitle>
-        <HomeText>Before use your own ContactsBook: SignUp or LogIn</HomeText>
+        <AnimatedGradientText>Welcome to your PhoneBook</AnimatedGradientText>
+        <HomeText>Before start, please
+
+          <Link  to="/login" end>
+              Log In
+          </Link >
+        </HomeText>
+        <HomeText>If you are new User, please 
+           <Link  to="/register" end>
+             Register
+          </Link >
+        </HomeText>
       </Container>
     </>
   );
