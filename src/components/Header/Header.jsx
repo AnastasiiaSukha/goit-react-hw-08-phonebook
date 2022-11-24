@@ -1,4 +1,4 @@
-import { NavLink, Outlet, useLocation } from 'react-router-dom';
+import {Outlet, useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Container, StyledHeader, StyledLink, Title } from './Header.styled';
 import AuthNavigation from 'components/AuthNavigation';
@@ -23,11 +23,11 @@ export default function Header() {
         <Container>
           <StyledLink to={routesPath.home}>
             <Title>
-              <RiContactsBook2Fill size="30px" />PhoneBook
+              <RiContactsBook2Fill size="25px" />PhoneBook
             </Title>
           </StyledLink>
           {isHomePath && isLoggedIn && (
-            <NavLink to={routesPath.contacts}>Back to ContactBook</NavLink>
+            <StyledLink to={routesPath.contacts}>Back to ContactBook</StyledLink>
           )}
           {isFetchingCurrentUser ? (
             Spinner.threeDots

@@ -75,8 +75,12 @@ export const RegForm = styled(Form)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 400px;
-  height: 310px;
+  width: 330px;
+  height: 210px;
+  @media ${({ theme }) => theme.media.tablet} {
+    width: 470px;
+    height: 310px;
+  }
   padding: 20px;
   margin: 0 auto;
   background-image: linear-gradient(to right top, #ffffff, #ececed, #d9d9db, #c7c7c9, #b4b5b8, #a3a4a7, #929396, #818285, #6d6e70, #5a5b5c, #484849, #363636);

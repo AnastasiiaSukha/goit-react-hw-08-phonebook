@@ -25,11 +25,13 @@ export const Button = styled.button.attrs({ type: 'submit' })`
   display: inline-flex;
   flex-direction: column;
   font-family: expo-brand-demi,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  font-size: 16px;
-  height: 35px;
+  font-size: ${p => p.theme.fontSizes.xs}px;
+  height: 25px;
   justify-content: center;
   line-height: 1;
   margin: 0;
+  margin-top: 3px;
+  margin-left: 10px;
   outline: none;
   overflow: hidden;
   padding: 0 32px;
@@ -56,12 +58,12 @@ export const Button = styled.button.attrs({ type: 'submit' })`
 &:focus {
   box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
 }
+@media ${({ theme }) => theme.media.tablet} {
+  font-size: ${p => p.theme.fontSizes.l}px;
+  height: 48px;
+  margin-left:5px;
+  };
 
-@media (max-width: 420px) {
-  .button-84 {
-    height: 48px;
-  }
-}
 
   ${p =>
     p.disabled &&

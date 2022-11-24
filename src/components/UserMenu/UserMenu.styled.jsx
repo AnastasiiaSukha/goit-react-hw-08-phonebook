@@ -12,13 +12,13 @@ export const Container = styled('div')`
   height: 100%;
 
   & span {
-    font-size: ${({ theme }) => theme.fontSizes.l}px;
+    font-size: ${({ theme }) => theme.fontSizes.m}px;
     margin-right: 12px;
     margin-left:7px;
     margin-top: 6px;
     color: #F2F1F0;
     @media ${({ theme }) => theme.media.tablet} {
-      font-size: ${({ theme }) => theme.fontSizes.m}px;
+      font-size: ${({ theme }) => theme.fontSizes.xs}px;
     }
   }
 `;

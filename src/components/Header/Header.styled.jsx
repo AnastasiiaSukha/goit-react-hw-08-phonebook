@@ -27,11 +27,12 @@ export const StyledLink = styled(Link)`
   text-decoration: none;
   color: #F7F8F8;
   margin-top:20px;
+  margin-left: 4px;
 `;
 
 export const Title = styled('h2')`
-  font-size: ${({ theme }) => theme.fontSizes.s}px;
+  font-size: ${({ theme }) => theme.fontSizes.xs}px;
   @media ${({ theme }) => theme.media.tablet} {
-    font-size: ${({ theme }) => theme.fontSizes.xl}px;
+    font-size: ${({ theme }) => theme.fontSizes.l}px;
   }
 `;

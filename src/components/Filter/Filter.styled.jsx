@@ -12,7 +12,9 @@ export const Input = styled.input.attrs({
 })`
     width: 200px;
     padding: ${p => p.theme.space[3]}px;
-    margin-left: ${p => p.theme.space[4]}px;
+     @media ${({ theme }) => theme.media.tablet} {
+  margin-left: ${p => p.theme.space[4]}px;
+  }
     font-size: ${p => p.theme.fontSizes.s}px;
     background: ${p => p.theme.colors.primary};
     outline: none;

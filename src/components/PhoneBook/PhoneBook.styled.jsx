@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const ContactsContainer = styled.div`
+  background-image: linear-gradient(to right top, #212121, #4c4f51, #788284, #acbab3, #edf2e2);
   width: 90vw;
   padding: ${p => p.theme.space[4]}px;
   margin-top: ${p => p.theme.space[6]}px;
@@ -17,17 +18,18 @@ export const ContactsContainer = styled.div`
 
 export const Title = styled.h2`
   font-size: ${p => p.theme.fontSizes.xl}px;
+  
   font-weight: ${p => p.theme.fontWeights.bold};
   text-align: center;
   margin-bottom: ${p => p.theme.space[4]}px;
-  background: #F6F8F9;
-background: radial-gradient(circle farthest-corner at center center, #F6F8F9 0%, #E5EBEE 30%, #D7DEE3 60%, #F5F7F9 100%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+color: black;
 `;
 
 export const Text = styled.h3`
 font-size: ${p => p.theme.fontSizes.l}px;
-color: white;
+ @media ${({ theme }) => theme.media.tablet} {
+  font-size: ${p => p.theme.fontSizes.xl}px;
+  }
+color: black;
 
 `

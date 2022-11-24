@@ -15,7 +15,10 @@ export const Container = styled('div')`
 
 
 export const HomeText = styled('p')`
-  font-size: ${({ theme }) => theme.fontSizes.xl}px;
+  font-size: ${({ theme }) => theme.fontSizes.l}px;
+  @media ${({ theme }) => theme.media.tablet} {
+    font-size: ${({ theme }) => theme.fontSizes.xl}px;
+  }
   text-align: center;
   color: ${({ theme }) => theme.colors.active};
 `;
